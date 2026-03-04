@@ -33,7 +33,7 @@ src/
 - Configuração de alias @;
 -  Tipagens TypeScript `src/types/index.ts`;
 - Instância do axios com interceptor de token;//nosso midleware automático para tokens antes/depois das requisições
-Criar o AuthContext e o useAuth
+- Criar o AuthContext e o useAuth: para evitar props e reenvios
 Criar as páginas de Login e Register
 Montar as rotas protegidas
 Dashboard + Contas + Relatórios
