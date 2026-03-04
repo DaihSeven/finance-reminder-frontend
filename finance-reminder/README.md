@@ -10,3 +10,30 @@ Currently, two official plugins are available:
  [this documentation](https://react.dev/learn/react-compiler/installation).
 
 [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+# FASES DO DESENVOLVIMENTO:
+
+
+- Instalação e configuração de dependências;
+
+- Limpeza de arquivos e códigos;
+
+- Criação de pastas: 
+
+```
+src/
+├── api/              ← camada de serviço (faz as requisições HTTP)
+├── controllers/      ← lógica de cada página (custom hooks)
+├── views/            ← páginas
+├── components/       ← componentes reutilizáveis
+├── context/          ← estado global (autenticação)
+├── routes/           ← definição das rotas
+├── types/            ← tipagens TypeScript
+```
+- Configuração de alias @;
+-  Tipagens TypeScript `src/types/index.ts`;
+- Instância do axios com interceptor de token;//nosso midleware automático para tokens antes/depois das requisições
+Criar o AuthContext e o useAuth
+Criar as páginas de Login e Register
+Montar as rotas protegidas
+Dashboard + Contas + Relatórios
