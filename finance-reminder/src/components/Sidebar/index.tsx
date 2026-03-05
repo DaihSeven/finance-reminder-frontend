@@ -26,7 +26,7 @@ export default function Sidebar() {
 
       {/* Logo */}
       <div className={styles.brand}>
-        <span className={styles.brandIcon}>₢</span>
+        <span className={styles.brandIcon}>₢</span>{/*alterar a logo*/}
         <div className={styles.brandText}>
           <span className={styles.brandName}>Finance</span>
           <span className={styles.brandSub}>Reminder</span>

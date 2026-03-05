@@ -53,9 +53,9 @@ Montar o layout:
 └─────┴─────────────┘
 - Componentes Sidebar e MainLayout: 
 
-Dashboard : total, contas a pagar e pendentes
+- Dashboard : total, contas a pagar e pendentes
 
-Export's de pdf e csv
+- Export's de pdf e csv: verificar opção do e-mail
 
 Contas :  o CRUD bills completo
 
