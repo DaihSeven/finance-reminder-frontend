@@ -51,5 +51,5 @@ Montar o layout:
 │ Sidebar│  Conteúdo da página   │
 
 └─────┴─────────────┘
-
+- Componentes Sidebar e MainLayout: 
 Dashboard + Contas + Relatórios

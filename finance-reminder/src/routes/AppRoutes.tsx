@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from '@/context/AuthContext'
 import type { JSX } from 'react'
-
+///import MainLayout    from '@/components/MainLayout'
 import LoginPage    from '@/views/LoginPage'
 import RegisterPage from '@/views/RegisterPage'
 import DashboardPage from '@/views/DashboardPage'
