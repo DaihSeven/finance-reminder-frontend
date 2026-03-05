@@ -36,9 +36,20 @@ src/
 
 - Instância do axios com interceptor de token;//nosso midleware automático para tokens antes/depois das requisições
 
-- Criar o AuthContext e o useAuth: para evitar props e reenvios
+- Criado o AuthContext e o useAuth: para evitar props e reenvios
 
-- Criar as páginas de Login e Register
+- Montado as rotas protegidas
 
-Montar as rotas protegidas
+- Criado as páginas de Login e Register
+
+- Montado as pastas/páginas de view
+
+Montar o layout: 
+
+┌─────┬─────────────┐
+
+│ Sidebar│  Conteúdo da página   │
+
+└─────┴─────────────┘
+
 Dashboard + Contas + Relatórios
