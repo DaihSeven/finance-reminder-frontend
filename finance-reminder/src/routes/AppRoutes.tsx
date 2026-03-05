@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from '@/context/AuthContext'
 import type { JSX } from 'react'
-///import MainLayout    from '@/components/MainLayout'
+import MainLayout    from '@/components/MainLayout'
 import LoginPage    from '@/views/LoginPage'
 import RegisterPage from '@/views/RegisterPage'
 import DashboardPage from '@/views/DashboardPage'
@@ -11,7 +11,9 @@ import ProfilePage  from '@/views/ProfilePage'
 // Componente que protege rotas privadas
 function PrivateRoute({ children }: { children: JSX.Element }) {
   const { isAuthenticated } = useAuth()
-  return isAuthenticated ? children : <Navigate to="/login" replace />
+  return isAuthenticated
+    ? <MainLayout>{children}</MainLayout>  
+    : <Navigate to="/login" replace />
 }
 
 // Componente que redireciona usuário já logado para fora do login

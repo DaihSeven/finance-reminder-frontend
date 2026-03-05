@@ -52,4 +52,11 @@ Montar o layout:
 
 └─────┴─────────────┘
 - Componentes Sidebar e MainLayout: 
-Dashboard + Contas + Relatórios
+
+Dashboard : total, contas a pagar e pendentes
+
+Export's de pdf e csv
+
+Contas :  o CRUD bills completo
+
+Perfil do usuário
