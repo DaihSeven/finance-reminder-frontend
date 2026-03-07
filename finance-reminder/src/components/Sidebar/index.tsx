@@ -13,7 +13,7 @@ function getInitials(name: string) {
 }
 
 export default function Sidebar() {
-  const { user, logout }  = useAuth()
+  const { user, logout, avatar } = useAuth()
   const navigate          = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -108,12 +108,23 @@ export default function Sidebar() {
 
         <div className={styles.userArea}>
           <div className={styles.userInfo}>
-            <div className={styles.avatar}>
-              {user?.name ? getInitials(user.name) : "?"}
-            </div>
-            <div>
-              <p className={styles.userName}>{user?.name ?? "—"}</p>
-              <p className={styles.userEmail}>{user?.email ?? "—"}</p>
+
+            {/* Avatar — imagem ou iniciais */}
+            {avatar ? (
+              <img
+                src={avatar}
+                alt="Avatar"
+                className={styles.avatarImg}
+              />
+            ) : (
+              <div className={styles.avatar}>
+                {user?.name ? getInitials(user.name) : '?'}
+              </div>
+            )}
+
+             <div>
+              <p className={styles.userName}>{user?.name ?? '—'}</p>
+              <p className={styles.userEmail}>{user?.email ?? '—'}</p>
             </div>
           </div>
 
