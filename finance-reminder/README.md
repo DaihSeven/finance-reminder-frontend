@@ -57,6 +57,9 @@ Montar o layout:
 
 - Export's de pdf e csv: verificar opção do e-mail
 
-Contas :  o CRUD bills completo
+- Contas :  o CRUD bills completo
 
-Perfil do usuário
+- Perfil do usuário
+
+- Deplou na Netlify
+
