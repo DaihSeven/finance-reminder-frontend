@@ -7,6 +7,7 @@ import RegisterPage from '@/views/RegisterPage'
 import DashboardPage from '@/views/DashboardPage'
 import BillsPage    from '@/views/BillsPage'
 import ProfilePage  from '@/views/ProfilePage'
+import ReportsPage from '@/views/ReportsPage'
 
 // Componente que protege rotas privadas
 function PrivateRoute({ children }: { children: JSX.Element }) {
@@ -35,7 +36,7 @@ export function AppRoutes() {
         <Route path="/dashboard" element={<PrivateRoute><DashboardPage /></PrivateRoute>} />
         <Route path="/bills"     element={<PrivateRoute><BillsPage /></PrivateRoute>} />
         <Route path="/profile"   element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
-
+        <Route path="/reports" element={<PrivateRoute><ReportsPage /></PrivateRoute>} />
         
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
         {/* Rota padrão */}
