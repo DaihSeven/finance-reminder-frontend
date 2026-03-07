@@ -8,6 +8,8 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 200;
+  transition: transform 0.3s ease;
 }
 
 .brand {
@@ -89,16 +91,6 @@
   background-color: rgba(30, 144, 255, 0.2);
 }
 
-.badge {
-  margin-left: auto;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  font-size: 11px;
-  font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 10px;
-}
-
 .divider {
   border: none;
   border-top: 1px solid #2a2a2a;
@@ -159,4 +151,73 @@
 .logoutButton:hover {
   border-color: var(--color-danger);
   color: var(--color-danger);
+}
+
+/* Botão hamburguer */
+.menuButton {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 300;
+  background: var(--color-bg-secondary);
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.menuIcon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 150;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.logos {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  .overlayHidden {
+    display: none;
+  }
 }

@@ -18,7 +18,7 @@
   margin-top: 2px;
 }
 
-/* ── Card de perfil ── */
+/* Card de perfil */
 .profileCard {
   background-color: var(--color-white);
   border-radius: 12px;
@@ -73,7 +73,7 @@
   margin-top: 2px;
 }
 
-/* ── Card de formulário ── */
+/* Card de formulário */
 .formCard {
   background-color: var(--color-white);
   border-radius: 12px;
@@ -149,7 +149,7 @@
   cursor: not-allowed;
 }
 
-/* ── Feedback ── */
+/* Feedback */
 .error {
   font-size: 13px;
   color: var(--color-danger);
@@ -166,7 +166,7 @@
   border-radius: 8px;
 }
 
-/* ── Card JWT ── */
+/* Card JWT */
 .jwtCard {
   background-color: var(--color-bg-secondary);
   border-radius: 12px;
@@ -194,4 +194,12 @@
   font-size: 12px;
   font-weight: 600;
   color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .profileCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }

@@ -10,3 +10,10 @@
   background-color: var(--color-bg-main);
   min-height: 100vh;
 }
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    padding: 72px 16px 24px 16px;
+  }
+}

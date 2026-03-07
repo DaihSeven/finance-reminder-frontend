@@ -20,7 +20,11 @@ export default function RegisterPage() {
       <div className={styles.card}>
 
         <div className={styles.header}>
-          <span className={styles.logo}>₢</span>
+          <img
+          src="/FR$.png"
+          alt="Finance Reminder"
+          className={styles.logo}
+          />
           <h1 className={styles.title}>Criar conta</h1>
           <p className={styles.subtitle}>Comece a controlar suas finanças</p>
         </div>

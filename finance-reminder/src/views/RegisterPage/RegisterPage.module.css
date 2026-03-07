@@ -118,3 +118,16 @@
 .link:hover {
   text-decoration: underline;
 }
+
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 32px 24px;
+  }
+}
