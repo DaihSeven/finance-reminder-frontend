@@ -9,7 +9,7 @@ interface AuthContextData {
   avatar: string | null
   login: (token: string, user: User) => void
   logout: () => void
-  updateAvatar: (avatar: string) => void
+  updateAvatar: (avatar: string | null) => void
 }
 
 const AuthContext = createContext({} as AuthContextData)
@@ -51,9 +51,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setAvatar(null)
   }
 
-  function updateAvatar(newAvatar: string) {
+  function updateAvatar(newAvatar: string | null) {
+     if (newAvatar) {
     localStorage.setItem('avatar', newAvatar)
     setAvatar(newAvatar)
+  } else {
+    localStorage.removeItem('avatar')
+    setAvatar(null)
+  }
   }
 
 const value = useMemo(() => ({
@@ -64,7 +69,7 @@ const value = useMemo(() => ({
         login,
         logout,
         updateAvatar,
-}), [user, token])
+}), [user, token, avatar])
   return (
     <AuthContext.Provider value={value}>
       {children}

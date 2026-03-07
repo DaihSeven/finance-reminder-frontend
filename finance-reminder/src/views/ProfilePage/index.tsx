@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import { useProfileController } from "@/controllers/useProfile";
 import { useAuth } from "@/context/AuthContext";
 import styles from "./ProfilePage.module.css";
@@ -25,6 +25,10 @@ const AVATARS = [
   "/avatars/avatar2.png",
   "/avatars/avatar3.png",
   "/avatars/avatar4.png",
+  "/avatars/avatar5.png",  
+  "/avatars/avatar6.png",
+  "/avatars/avatar7.png",
+  "/avatars/avatar8.png",
 ];
 
 export default function ProfilePage() {
@@ -34,6 +38,10 @@ export default function ProfilePage() {
 
   const [phone, setPhone]                       = useState(user?.phone ?? "");
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
+
+  useEffect(() => {
+  setPhone(user?.phone ?? "")
+  }, [user])
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -46,7 +54,7 @@ export default function ProfilePage() {
   }
 
   function handleRemoveAvatar() {
-    updateAvatar("");
+    updateAvatar(null);
     setShowAvatarPicker(false);
   }
 
@@ -103,7 +111,9 @@ export default function ProfilePage() {
 
             {/* Opção iniciais */}
             <button
-              className={`${styles.avatarOption} ${!avatar ? styles.avatarOptionActive : ""}`}
+              className={`${styles.avatarOption} ${
+                avatar === null || avatar === '' ? styles.avatarOptionActive : ''
+              }`}
               onClick={handleRemoveAvatar}
               title="Usar iniciais"
             >

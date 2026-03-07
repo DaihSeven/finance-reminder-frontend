@@ -14,8 +14,9 @@
 }
 
 .subtitle {
-  font-size: 14px;
-  color: #888;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffb6Cc ;
   margin-top: 2px;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .cardValuePending {
-  color: #e6a817;
+  color: #CD5C5C;
 }
 
 .cardValuePaid {

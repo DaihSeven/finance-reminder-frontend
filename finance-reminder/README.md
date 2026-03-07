@@ -63,3 +63,12 @@ Montar o layout:
 
 - Deplou na Netlify
 
+- Relatórios com envio para e-mail
+
+-estilizações de interface
+
+- Avatares e logos
+
+- Ajustes de responsividade
+
+

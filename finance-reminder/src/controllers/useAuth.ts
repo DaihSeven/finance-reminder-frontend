@@ -17,10 +17,14 @@ export function useAuthController() {
 
       const { data } = await authApi.login(email, password)
 
-      // buscar o usuário pelo token
-      
-      login(data.token, { id: '', name: '', email, phone: undefined, createdAt: '', updatedAt: '' })
+      const savedUser    = localStorage.getItem('user')
+      const existingUser = savedUser ? JSON.parse(savedUser) : null
 
+      const user = existingUser?.email === email
+        ? existingUser
+        : { id: '', name: email.split('@')[0], email, phone: undefined, createdAt: '', updatedAt: '' }
+
+      login(data.token, user)
       navigate('/dashboard')
     } catch (err: any) {
       setError(err.response?.data?.message || 'Erro ao fazer login')
@@ -35,8 +39,6 @@ export function useAuthController() {
       setError(null)
 
       await authApi.register(name, email, password)
-
-      // login automaticamente
       await handleLogin(email, password)
     } catch (err: any) {
       setError(err.response?.data?.message || 'Erro ao criar conta')

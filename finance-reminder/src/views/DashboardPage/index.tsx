@@ -85,7 +85,7 @@ export default function DashboardPage() {
           <button className={styles.exportBtn} onClick={handleExportCsv}>
             ⬇ CSV
           </button>
-          {/* talvez esteja com problema, verificar com conta real depois*/}
+          
           <button className={styles.exportBtn} onClick={handleExportPdf}>
             📄 PDF
           </button>

@@ -13,8 +13,9 @@
 }
 
 .subtitle {
-  font-size: 14px;
-  color: #888;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffb6Cc ;
   margin-top: 2px;
 }
 
@@ -203,8 +204,8 @@
 }
 
 .avatarImg {
-  width: 64px;
-  height: 64px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--color-primary);
@@ -214,8 +215,8 @@
   position: absolute;
   bottom: -4px;
   right: -4px;
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background-color: var(--color-white);
   border: 1.5px solid var(--color-text-light);

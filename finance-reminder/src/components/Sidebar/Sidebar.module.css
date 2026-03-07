@@ -160,19 +160,17 @@
   top: 16px;
   left: 16px;
   z-index: 300;
-  background: var(--color-bg-secondary);
   border: none;
   border-radius: 8px;
   padding: 6px;
+  background-color: transparent;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .menuIcon {
-  width: 32px;
+  width: 72px;
   height: 32px;
-  object-fit: contain;
-  display: block;
 }
 
 /* Overlay */
@@ -198,8 +196,8 @@
 }
 
 .avatarImg {
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;

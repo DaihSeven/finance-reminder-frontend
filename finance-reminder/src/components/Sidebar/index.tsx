@@ -34,7 +34,7 @@ export default function Sidebar() {
         onClick={() => setIsOpen(true)}
         aria-label="Abrir menu"
       >
-        <img src="/menuFR$.png" alt="Menu" className={styles.menuIcon} />
+        <img src="/menu.png" alt="Menu" className={styles.menuIcon} />
       </button>
 
       {/* Overlay escuro — fecha o menu ao clicar fora */}
