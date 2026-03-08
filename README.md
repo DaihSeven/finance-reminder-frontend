@@ -28,8 +28,6 @@
 
 ## 📸 Screenshots
 
-> Substitua os links abaixo pelos prints reais do projeto.
-
 | Login | Registro |
 |-------|-----------|
 | ![Login](./imagesFR$/login.png) | ![Registro](./imagesFR$/cadastro.png) |
