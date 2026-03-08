@@ -16,8 +16,9 @@
 }
 
 .subtitle {
-  font-size: 14px;
-  color: #888;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffb6Cc ;
   margin-top: 2px;
 }
 
@@ -43,7 +44,7 @@
   color: var(--color-primary);
 }
 
-/* ── Cards de resumo ── */
+/* Cards de resumo */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -74,7 +75,7 @@
 }
 
 .cardValuePending {
-  color: #e6a817;
+  color: #CD5C5C ;
 }
 
 .cardValuePaid {
@@ -85,7 +86,7 @@
   color: var(--color-primary);
 }
 
-/* ── Lista de contas ── */
+/* Lista de contas */
 .section {
   background-color: var(--color-white);
   border-radius: 12px;
@@ -124,7 +125,7 @@
   font-size: 14px;
 }
 
-/* ── Bill Row ── */
+/* Bill Row */
 .billRow {
   display: flex;
   align-items: center;
@@ -191,7 +192,7 @@
   font-weight: 600;
 }
 
-/* ── Loading / Error ── */
+/* Loading / Error */
 .loading {
   display: flex;
   align-items: center;
@@ -208,4 +209,21 @@
   border-radius: 8px;
   font-size: 13px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .exportButtons {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
